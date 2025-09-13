@@ -10,13 +10,13 @@ function DataDisplay() {
   const [compSciIsLoading, setCompSciIsLoading] = useState(true); 
 
   useEffect(() => {
-    fetch(`http://[IP address here]:8000/bio/`) // Need to input API URL/IP address
+    fetch(`${process.env.BIO_URL}`) // Need to input API URL/IP address
     .then(response => response.json())
     .then(json => {
       setBiologists(json);
       setBioIsLoading(false);
     })
-    fetch(`http://[IP address here]:8000/compsci/`) // Need to input API URL/IP address
+    fetch(`${process.env.COMPSCI_URL}`) // Need to input API URL/IP address
     .then((response) => response.json())
     .then((json) => {
       setCompSci(json);
@@ -24,10 +24,20 @@ function DataDisplay() {
   }, []);
    
   if (bioIsLoading) {
-    return <div>Loading...</div>
+    return (
+    <div>
+      <div>Loading...</div>
+      <div>Backend is hosted on Render free tier and may need to spool up</div>
+      <div>If data isn't loading; please refresh in a minute</div>
+    </div>)
   }
   if (compSciIsLoading) {
-    return <div>Loading...</div>
+    return (
+    <div>
+      <div>Loading...</div>
+      <div>Backend is hosted on Render free tier and may need to spool up</div>
+      <div>If data isn't loading; please refresh in a minute</div>
+    </div>)
   }
   
   return (
