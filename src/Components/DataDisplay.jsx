@@ -29,6 +29,11 @@ function DataDisplay() {
       <div>
         <div>Loading...</div>
         <div>Backend may need to spin up; please wait and refresh if data doesn't appear.</div>
+        <div>
+          If refreshing doesn't work, please 
+          <a href="https://example.com">click here</a>, 
+          wait until Render shows an HTTP 200 OK page, then refresh this page again.
+        </div>
       </div>
     )
   }
