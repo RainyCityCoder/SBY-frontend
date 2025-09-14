@@ -30,9 +30,7 @@ function DataDisplay() {
     return (
       <div>
         <div>Loading...</div>
-        <div>Backend may need to spin up; please wait and refresh if data doesn't appear.</div>
-        <div>
-          If refreshing doesn't work, please 
+        <div>Backend is hosted on free-tier account, please 
           <a href={import.meta.env.VITE_COMPSCI_URL}> click here</a>, 
           wait until Render shows an HTTP 200 OK page, then refresh this page again.
         </div>
