@@ -108,6 +108,10 @@
 
 /* Mobile: cards stack in one column */
 @media (max-width: 576px) {
+  .cards-grid {
+    grid-template-columns: 1fr; /* force 1 column */
+    gap: 0.5rem 0; /* optional: vertical spacing between cards */
+  }
   .cards-container {
     flex-direction: column;
     gap: 0.4rem; 
