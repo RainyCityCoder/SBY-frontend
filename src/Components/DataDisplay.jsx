@@ -37,7 +37,7 @@ function DataDisplay() {
     <Container className="groups-container">
       {/* Biologists */}
       <Card className="group-card">
-        <Card.Header as="h3">Biologists</Card.Header>
+        <Card.Header as="h2">Biologists</Card.Header>
         <Card.Body>
           <div className="cards-grid">
             {biologists.map(el => (
@@ -53,7 +53,7 @@ function DataDisplay() {
 
       {/* Computer Scientists */}
       <Card className="group-card">
-        <Card.Header as="h3">Computer Scientists</Card.Header>
+        <Card.Header as="h2">Computer Scientists</Card.Header>
         <Card.Body>
           <div className="cards-grid">
             {compSci.map(el => (

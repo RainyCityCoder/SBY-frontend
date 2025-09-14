@@ -24,7 +24,7 @@
   background-color: #878787; 
   border: 3px solid #ea4b2d; 
   border-radius: 15px 50px 30px;
-  color: #ebebeb;
+  color: #EAEAEA;
   padding: 0.75rem; 
 }
 
@@ -108,12 +108,23 @@
 
 /* Mobile: cards stack in one column */
 @media (max-width: 576px) {
-  .cards-grid {
-    grid-template-columns: 1fr; /* force 1 column */
-    gap: 0.5rem 0; /* optional: vertical spacing between cards */
-  }
-  .cards-container {
+  .groups-container {
+    display: flex;
     flex-direction: column;
-    gap: 0.4rem; 
+    align-items: center;  /* center the group cards */
+    gap: 1rem;
+  }
+  .group-card {
+    flex: 0 1 90%;
+    max-width: 350px;
+    margin-bottom: 1rem;
+  }
+  .group-card:last-child {
+    margin-bottom: 0;
+  }
+  .cards-grid {
+    grid-template-columns: 1fr;
+    gap: 0.5rem 0;
+    justify-items: center;
   }
 }
