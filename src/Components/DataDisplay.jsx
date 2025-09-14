@@ -8,15 +8,17 @@ function DataDisplay() {
   const [compSci, setCompSci] = useState([]);
   const [bioIsLoading, setBioIsLoading] = useState(true);
   const [compSciIsLoading, setCompSciIsLoading] = useState(true); 
+  const bioUrl = import.meta.env.VITE_BIO_URL
+  const compSciUrl = import.meta.env.VITE_COMPSCI_URL
 
   useEffect(() => {
-    fetch(import.meta.env.VITE_BIO_URL)
+    fetch(bioUrl)
       .then(res => res.json())
       .then(json => {
         setBiologists(json);
         setBioIsLoading(false);
       });
-    fetch(import.meta.env.VITE_COMPSCI_URL)
+    fetch(compSciUrl)
       .then(res => res.json())
       .then(json => {
         setCompSci(json);
@@ -31,7 +33,7 @@ function DataDisplay() {
         <div>Backend may need to spin up; please wait and refresh if data doesn't appear.</div>
         <div>
           If refreshing doesn't work, please 
-          <a href="https://example.com">click here</a>, 
+          <a href={import.meta.env.VITE_COMPSCI_URL}> click here</a>, 
           wait until Render shows an HTTP 200 OK page, then refresh this page again.
         </div>
       </div>
