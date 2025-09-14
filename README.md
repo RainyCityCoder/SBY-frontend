@@ -60,4 +60,4 @@ Once downloaded, in your terminal navigate to `SBY-backend/pythonbackend`, and s
 - Django back-end (API)
     * djangorestframework
     * django-cors-headers
-- SQLite3 database
+- PostgreSQL database
